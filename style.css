@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #518cb4;
+    --color-texto1: darkblue;
+    --color-texto2: #f6f6f6;
+    --color-texto3: black;
+    --color-alerta: red;
+    --color-boton: #024179;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: var(--color-primario);
+    box-sizing: border-box;
+    color: var(--color-texto2);
+}
+.header{
+    padding: 2% 0% 0% 5%;
+}
+.header_menu{
+    display: flex;
+    gap: 3.5rem;
+}
+.header_link{
+    font-family: 'Noto Sans', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-texto3);
+    text-decoration: none;
+}
+.portafolio{
+    display: flex;
+    align-items: center;
+    padding: 4% 5%;
+    justify-content: space-between;
+}
+.portafolio_contenido{
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.alura{
+    color: rgb(71, 176, 221);
+}
+.portafolio_contenido_titulo{
+    color: var(--color-texto1);
+    font-size: 2rem;
+    font-family: "Krona One", serif;
+
+}
+.descripcion{
+    color: var(--color-texto2);
+    font-size: 1.4rem;
+    font-family: "Noto Sans", serif;
+}
+.alerta{
+    color: var(--color-alerta);
+}
+
+/*Apartado de enlaces */
+.portafolio_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.titulo_enlaces_subtitulo{
+    font-family: "Krona One", sans serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.enlace_instagram{
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 15px 0px;
+    text-decoration: none;
+    color: var(--color-texto2);
+    font-family: "Noto Sans", serif;
+    border: 2px solid var(--color-boton);
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+.enlace_github{
+    font-family: "Noto Sans", serif;
+    font-weight: 600;
+    display: flex;
+    text-align: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+    padding: 15px 0px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 200px;
+    color: var(--color-texto2);
+    border: 2px solid var(--color-boton);
+    justify-content: center;
+}
+.enlace_github:hover,.enlace_instagram:hover{
+    background-color: var(--color-boton);
+}
+/*Footer*/
+.footer{
+    background-color: turquoise;
+    padding: 1.2rem;
+    color: var(--color-texto3);
+    text-align: center;
+    font-family: 'Noto Sans', serif;
+}
+/*Modificacion segun pantalla*/
+@media(max-width:1200px){
+    .portafolio{
+        flex-direction: column-reverse;
+        padding: 5%;;
+    }
+    .portafolio_contenido{
+        width: auto;
+    }
+    .header{
+        padding: 5%;
+
+    }
+    .header_menu{
+        justify-content: center;
+    }
+}
